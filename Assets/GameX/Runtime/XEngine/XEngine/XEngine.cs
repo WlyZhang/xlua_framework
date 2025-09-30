@@ -82,14 +82,6 @@ public class XEngine : BaseManager
         // 初始化Lua虚拟机
         Lua = Lua.Create();
 
-        // TODO: 封装 ILoader 接口
-        // 初始化Lua加载器
-        // 初始化Typescript加载器
-
-
-        // 检测选择的Lua加载器
-        CheckLuaLoader();
-
         IsLoad = true;
 
         return IsLoad;
@@ -106,11 +98,10 @@ public class XEngine : BaseManager
     }
 
 
-
     /// <summary>
     /// 检测选择Lua加载器
     /// </summary>
-    private void CheckLuaLoader()
+    public void SetupLoader(LoaderType LoaderType)
     {
         switch (LoaderType)
         {
@@ -128,5 +119,4 @@ public class XEngine : BaseManager
                 break;
         }
     }
-
 }

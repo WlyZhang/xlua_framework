@@ -27,6 +27,15 @@ public class XConfig
     /// </summary>
     public string DevelopLicense { get; set; }
 
+    /// <summary>
+    /// 构造函数
+    /// </summary>
+    public XConfig() { }
+
+    /// <summary>
+    /// 构造函数（重载）
+    /// </summary>
+    /// <param name="json"></param>
     public XConfig(string json)
     {
         XConfig config = JsonConvert.DeserializeObject<XConfig>(json);
